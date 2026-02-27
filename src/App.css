@@ -1,38 +1,84 @@
+/* Layout and Background */
 .App {
+  display: flex; /* Centers the card horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7f9; /* Light, soft background like your screenshot */
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* The Card Style */
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  width: 100%;
+  max-width: 380px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 800; /* Bold title as seen in mockup */
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Form Groups */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Requirement: Controlled Component Inputs */
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Prevents input from overflowing */
+  transition: border 0.2s ease;
+}
+
+/* Dynamic Classes for Form Feedback */
+.border-gray {
+  border: 1px solid #ccc;
+}
+
+.border-red {
+  border: 2px solid #e74c3c; /* Red border for errors */
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c; /* Matches the "Invalid credentials" text */
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* The SkyLine Blue Button */
+.btn-primary {
+  background-color: #3498db; 
   color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary:hover {
+  background-color: #2980b9;
 }
